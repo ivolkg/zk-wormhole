@@ -22,7 +22,6 @@ fn wormhole() -> Receipt {
     // creates an ExecutorEnvBuilder. When you're done adding input, call
     // ExecutorEnvBuilder::build().
 
-    // For example:
     let nullifier = [0_u8; 32];
     let secret = [1_u8; 32];
     let amount = 100_u64;
@@ -51,12 +50,12 @@ fn wormhole() -> Receipt {
     let receipt = prover.prove_elf(env, WORMHOLE_ELF).unwrap();
     receipt
 }
+
 fn main() {
 
     // TODO: Implement code for retrieving receipt journal here.
 
     let receipt = wormhole();
-    // For example:
     let _output: u32 = receipt.journal.decode().unwrap();
 
     // Optional: Verify receipt to confirm that recipients will also be able to

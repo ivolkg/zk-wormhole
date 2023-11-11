@@ -1,8 +1,0 @@
-Building guest package methods.wormhole
-cargo:rerun-if-env-changed=RISC0_SKIP_BUILD
-Using rustc: /home/isaac/.rustup/toolchains/risc0/bin/rustc
-cargo:rerun-if-env-changed=RISC0_RUST_SRC
-Building guest package: cargo build --target riscv32im-risc0-zkvm-elf
-cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
-cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
-cargo:rerun-if-changed=/home/isaac/Work/zkHack2023/zkwormhole/verifier/target/debug/build/methods-0256420dedc066b9/out/methods.rs
