@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./wormhole/methods/guest/Cargo.toml"
+    ]
+}
