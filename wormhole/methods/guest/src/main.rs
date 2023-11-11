@@ -20,4 +20,12 @@ pub fn main() {
     hasher.update(&secret);
     let mut unspendable_addr = [0_u8; 32];
     hasher.finalize(&mut unspendable_addr);
+    let amount: u64 = env::read();
+    env::commit(&amount);
+    let balance: u64 = env::read();
+    assert!(balance > amount);
+    let state_root: [u8; 32] = env::read();
+    env::commit(&state_root);
+    let sender_addr: [u8; 20] = env::read();
+    env::commit(&sender_addr);
 }

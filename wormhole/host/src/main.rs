@@ -4,8 +4,9 @@ use methods::{
     WORMHOLE_ELF, WORMHOLE_ID
 };
 use risc0_zkvm::{default_prover, ExecutorEnv};
+use risc0_zkvm::Receipt;
 
-fn main() {
+fn wormhole() -> Receipt {
     // Initialize tracing. In order to view logs, run `RUST_LOG=info cargo run`
     env_logger::init();
 
@@ -24,10 +25,22 @@ fn main() {
     // For example:
     let nullifier = [0_u8; 32];
     let secret = [1_u8; 32];
+    let amount = 100_u64;
+    let balance = 1000_u64;
+    let state_root = [2_u8; 32];
+    let sender_addr = [3_u8; 20];
     let env = ExecutorEnv::builder()
     .write(&nullifier)
     .unwrap()
     .write(&secret)
+    .unwrap()
+    .write(&amount)
+    .unwrap()
+    .write(&balance)
+    .unwrap()
+    .write(&state_root)
+    .unwrap()
+    .write(&sender_addr)
     .unwrap()
     .build().unwrap();
 
@@ -36,9 +49,13 @@ fn main() {
 
     // Produce a receipt by proving the specified ELF binary.
     let receipt = prover.prove_elf(env, WORMHOLE_ELF).unwrap();
+    receipt
+}
+fn main() {
 
     // TODO: Implement code for retrieving receipt journal here.
 
+    let receipt = wormhole();
     // For example:
     let _output: u32 = receipt.journal.decode().unwrap();
 

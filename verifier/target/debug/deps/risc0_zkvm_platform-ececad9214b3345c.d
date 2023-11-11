@@ -1,0 +1,10 @@
+/home/isaac/Work/zkHack2023/zkwormhole/verifier/target/debug/deps/risc0_zkvm_platform-ececad9214b3345c.rmeta: /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/lib.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/memory.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/syscall.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/../README.md
+
+/home/isaac/Work/zkHack2023/zkwormhole/verifier/target/debug/deps/librisc0_zkvm_platform-ececad9214b3345c.rlib: /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/lib.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/memory.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/syscall.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/../README.md
+
+/home/isaac/Work/zkHack2023/zkwormhole/verifier/target/debug/deps/risc0_zkvm_platform-ececad9214b3345c.d: /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/lib.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/memory.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/syscall.rs /home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/../README.md
+
+/home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/lib.rs:
+/home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/memory.rs:
+/home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/syscall.rs:
+/home/isaac/.cargo/registry/src/index.crates.io-6f17d22bba15001f/risc0-zkvm-platform-0.19.1/src/../README.md:
