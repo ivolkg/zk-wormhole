@@ -20,6 +20,10 @@ pub fn main() {
     hasher.update(&secret);
     let mut unspendable_addr = [0_u8; 32];
     hasher.finalize(&mut unspendable_addr);
+    let mut hasher = Keccak::v256();
+    hasher.update(&unspendable_addr);
+    let mut unspendable_addr = [0_u8; 32];
+    hasher.finalize(&mut unspendable_addr);
     let amount: u64 = env::read();
     env::commit(&amount);
     let balance: u64 = env::read();

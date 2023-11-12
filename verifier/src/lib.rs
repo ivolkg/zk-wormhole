@@ -4,6 +4,19 @@ use libc::size_t;
 use std::slice;
 use risc0_zkvm::{Receipt, SegmentReceipts, SegmentReceipt, InnerReceipt};
 use methods::WORMHOLE_ID;
+use host::wormhole;
+use host::PubInputs;
+
+#[no_mangle]
+pub extern "C" fn prove_wormhole() -> Receipt {
+    wormhole([0_u8; 32], [1_u8; 32], 100_u64, 1000_u64, [2_u8; 32], [3_u8; 20])
+}
+
+#[no_mangle]
+pub extern "C" fn get_public_inputs(receipt: &Receipt) -> PubInputs {
+    let journal = &receipt.journal.bytes;
+    PubInputs::new(&journal)
+}
 
 fn as_u32_be(a: u8, b: u8, c: u8, d: u8) -> u32 {
     ((a as u32) << 24) +

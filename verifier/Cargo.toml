@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 risc0-zkvm = { version = "0.19.1" }
 methods = { path = "../wormhole/methods" }
+host = { path = "../wormhole/host"}
 libc = "*"
 
 [lib]
