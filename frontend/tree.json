@@ -1,0 +1,181 @@
+{
+  "nodes": {
+    "0x16e3da269dedd993e091a2f6dc6912f5453e4ee92faee71caf2a12433bc57872": {
+      "left": "0x12f8459b412422e245a6837ec47b764a8325d12944b8f49877af1d0fdc419c79",
+      "right": "0x009de57dab1f6a6a1098ef9d309c48f828827c232b3dcaf6e53f6ee950b3b738",
+      "index": 0,
+      "depth": 0
+    },
+    "0x12f8459b412422e245a6837ec47b764a8325d12944b8f49877af1d0fdc419c79": {
+      "left": "0x1212758f9015eeffdd28493fe62cba8ce65dc4e5483c079961c949a2b673c1c4",
+      "right": "0x050652734e48385be9695d8e593f53232291b20572c45ea0649a2a631849838b",
+      "index": 0,
+      "depth": 1
+    },
+    "0x1212758f9015eeffdd28493fe62cba8ce65dc4e5483c079961c949a2b673c1c4": {
+      "left": "0x0d2a33d96190abeb04e40d00a4597947e64a8084dc765f2711bf4c759b7dd890",
+      "right": "0x0865dec385d7c4d9571d617cb98b43b6d361c8730385b74f6abe25113324683e",
+      "index": 0,
+      "depth": 2
+    },
+    "0x050652734e48385be9695d8e593f53232291b20572c45ea0649a2a631849838b": {
+      "left": "0x08e1e1939815122e742aa0c17c6609fd671dc0300b4e63d7d5e745b410b09238",
+      "right": "0x21be5b353cb35630b353c8adb42800a9ac7c9b1f9495a60de7a96ce238ddeae9",
+      "index": 1,
+      "depth": 2
+    },
+    "0x009de57dab1f6a6a1098ef9d309c48f828827c232b3dcaf6e53f6ee950b3b738": {
+      "left": "0x12bbd966ad128a0205ee32ba6eeb1ae6af4d8c2c3480e6b291d49e78408dd34a",
+      "right": "0x0b1fbfe88a8cbbd26f2290800160c9b18d15c37b9a5e53e7fb642d09c628c021",
+      "index": 1,
+      "depth": 1
+    },
+    "0x12bbd966ad128a0205ee32ba6eeb1ae6af4d8c2c3480e6b291d49e78408dd34a": {
+      "left": "0x2693860bcdf3c6097aae1afc5a72e3bca995967d3d8a0d80f0721908fdf2200b",
+      "right": "0x17a0454e6adf6379b6d231f0beb06b589620a4652b32bbeb904a98850e99efd2",
+      "index": 2,
+      "depth": 2
+    },
+    "0x0b1fbfe88a8cbbd26f2290800160c9b18d15c37b9a5e53e7fb642d09c628c021": {
+      "left": "0x277a1db875fe6865afb6f4d4fd25660a0b8816834252347e7a448db0c4c6748e",
+      "right": "0x2f28d9c4ce96aa112365646c103d858b0e1cde2c171dc61d56a1cd9465b667fb",
+      "index": 3,
+      "depth": 2
+    }
+  },
+  "tree": {
+    "hash": "0x16e3da269dedd993e091a2f6dc6912f5453e4ee92faee71caf2a12433bc57872",
+    "left": {
+      "hash": "0x12f8459b412422e245a6837ec47b764a8325d12944b8f49877af1d0fdc419c79",
+      "left": {
+        "hash": "0x1212758f9015eeffdd28493fe62cba8ce65dc4e5483c079961c949a2b673c1c4",
+        "left": "0x0d2a33d96190abeb04e40d00a4597947e64a8084dc765f2711bf4c759b7dd890",
+        "right": "0x0865dec385d7c4d9571d617cb98b43b6d361c8730385b74f6abe25113324683e"
+      },
+      "right": {
+        "hash": "0x050652734e48385be9695d8e593f53232291b20572c45ea0649a2a631849838b",
+        "left": "0x08e1e1939815122e742aa0c17c6609fd671dc0300b4e63d7d5e745b410b09238",
+        "right": "0x21be5b353cb35630b353c8adb42800a9ac7c9b1f9495a60de7a96ce238ddeae9"
+      }
+    },
+    "right": {
+      "hash": "0x009de57dab1f6a6a1098ef9d309c48f828827c232b3dcaf6e53f6ee950b3b738",
+      "left": {
+        "hash": "0x12bbd966ad128a0205ee32ba6eeb1ae6af4d8c2c3480e6b291d49e78408dd34a",
+        "left": "0x2693860bcdf3c6097aae1afc5a72e3bca995967d3d8a0d80f0721908fdf2200b",
+        "right": "0x17a0454e6adf6379b6d231f0beb06b589620a4652b32bbeb904a98850e99efd2"
+      },
+      "right": {
+        "hash": "0x0b1fbfe88a8cbbd26f2290800160c9b18d15c37b9a5e53e7fb642d09c628c021",
+        "left": "0x277a1db875fe6865afb6f4d4fd25660a0b8816834252347e7a448db0c4c6748e",
+        "right": "0x2f28d9c4ce96aa112365646c103d858b0e1cde2c171dc61d56a1cd9465b667fb"
+      }
+    }
+  },
+  "leafs": {
+    "0x0d2a33d96190abeb04e40d00a4597947e64a8084dc765f2711bf4c759b7dd890": {
+      "investor_id": 0,
+      "investor_type": 1,
+      "location": 826,
+      "review_date": 1918981526129,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0xfebb054ab304e1c61bf0d248abd9d9a3bfea03af5a1bc6b7ade8c1833afe"
+    },
+    "0x0865dec385d7c4d9571d617cb98b43b6d361c8730385b74f6abe25113324683e": {
+      "investor_id": 1,
+      "investor_type": 1,
+      "location": 826,
+      "review_date": 1918981526129,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0x1becad9d318b4e47c21d11d86623b9d260136071615866de91b5b3ac575e"
+    },
+    "0x08e1e1939815122e742aa0c17c6609fd671dc0300b4e63d7d5e745b410b09238": {
+      "investor_id": 2,
+      "investor_type": 1,
+      "location": 826,
+      "review_date": 1918981526129,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0x73510facff8cbdbb6db6614d082d2a0cea4bf6858c5ba8dc432ab3e95618"
+    },
+    "0x21be5b353cb35630b353c8adb42800a9ac7c9b1f9495a60de7a96ce238ddeae9": {
+      "investor_id": 3,
+      "investor_type": 2,
+      "location": 826,
+      "review_date": 1918981526129,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0x10ec71cbfdf3304831ea468602a14885e0a6a9505c23c94b9347ce32b278"
+    },
+    "0x2693860bcdf3c6097aae1afc5a72e3bca995967d3d8a0d80f0721908fdf2200b": {
+      "investor_id": 4,
+      "investor_type": 4,
+      "location": 826,
+      "review_date": 1918981526129,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0xbe8ac974114f187fb6d6e2d44fa12d0bb2bdc5406ddd8cdd95a53948b753"
+    },
+    "0x17a0454e6adf6379b6d231f0beb06b589620a4652b32bbeb904a98850e99efd2": {
+      "investor_id": 5,
+      "investor_type": 3,
+      "location": 826,
+      "review_date": 1862540893008,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0x969e632843456d7a3ea1642a99c49d767b7f62ef61c8ee80ca6bda20c06d"
+    },
+    "0x277a1db875fe6865afb6f4d4fd25660a0b8816834252347e7a448db0c4c6748e": {
+      "investor_id": 6,
+      "investor_type": 4,
+      "location": 826,
+      "review_date": 1862540893008,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0x0ea4866bbf7397552bb9a10e4926960f0e070d65f38a9f1c44999bea513a"
+    },
+    "0x2f28d9c4ce96aa112365646c103d858b0e1cde2c171dc61d56a1cd9465b667fb": {
+      "investor_id": 7,
+      "investor_type": 3,
+      "location": 826,
+      "review_date": 1806100259886,
+      "kyc_passed": true,
+      "aml_passed": true,
+      "sanctions_passed": true,
+      "blocked": false,
+      "self_cert": true,
+      "fitness_test": true,
+      "nonce": "0xb34ca11c69732ca2d4acd3b5e418f62d0bc4a852492cfdd563c71fedeff3"
+    }
+  }
+}

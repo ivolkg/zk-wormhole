@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form id="createAccount" action="/create_account">
+  <p><input placeholder="Nullifier" name="nullifier"></p>
+  <p><input placeholder="Secret" name="secret"></p>
+  <p><input placeholder="Value" name="value"></p>
+</form>
+  <p><button type="submit" form="createAccount" href="/create_account">Generate proof</button></p>
+
+<form id="withdraw" action="/withdraw">
+  <p><input placeholder="Nullifier" name="nullifier"></p>
+  <p><input placeholder="StateRoot(ignored)" name="state_root"></p>
+  <p><input placeholder="Value" name="value"></p>
+  <p><input placeholder="Proof" name="proof"></p>
+</form>
+  <p><button type="submit" form="withdraw" href="/withdraw">Generate proof</button></p>
+
+</body>
+</html>
+
