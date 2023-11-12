@@ -59,6 +59,21 @@ fn encode_seal(seal: &Vec<u32>) -> Vec<u8> {
     res
 }
 
+fn as_u32_be(a: u8, b: u8, c: u8, d: u8) -> u32 {
+    ((a as u32) << 24) +
+    ((b as u32) << 16) +
+    ((c as u32) <<  8) +
+    ((d as u32) <<  0)
+}
+
+fn decode_seal(encoded: &[u8]) -> Vec<u32> {
+     let mut seal = Vec::<u32>::new();
+     for i in (0..encoded.len()).step_by(4) {
+        seal.push(as_u32_be(encoded[i], encoded[i + 1], encoded[i + 2], encoded[i + 3]));
+     }
+     seal
+}
+
 fn main() {
 
     // TODO: Implement code for retrieving receipt journal here.
@@ -67,11 +82,14 @@ fn main() {
     let seal = receipt.inner.flat().unwrap()[0].seal.clone();
     let journal = receipt.journal.bytes;
     
-    println!("{}", hex::encode(&encode_seal(&seal)));
+    let seal_encoded = encode_seal(&seal);
+    let seal_decoded = decode_seal(&seal_encoded);
+    
+    println!("{:?}", journal);
     
     let receipt2 = Receipt::new(
         InnerReceipt::Flat(SegmentReceipts(vec![SegmentReceipt {
-            seal: seal,
+            seal: seal_decoded,
             index: 0,
             hashfn: "poseidon".to_string(),
         }])),
