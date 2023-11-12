@@ -4,7 +4,7 @@ use methods::{
     WORMHOLE_ELF, WORMHOLE_ID
 };
 use risc0_zkvm::{default_prover, ExecutorEnv};
-use risc0_zkvm::Receipt;
+use risc0_zkvm::{Receipt, InnerReceipt, SegmentReceipts, Journal, SegmentReceipt};
 
 fn wormhole() -> Receipt {
     // Initialize tracing. In order to view logs, run `RUST_LOG=info cargo run`
@@ -51,14 +51,34 @@ fn wormhole() -> Receipt {
     receipt
 }
 
+fn encode_seal(seal: &Vec<u32>) -> Vec<u8> {
+    let mut res = Vec::<u8>::new();
+    for i in seal {
+        res.extend_from_slice(&i.to_be_bytes());
+    }
+    res
+}
+
 fn main() {
 
     // TODO: Implement code for retrieving receipt journal here.
 
     let receipt = wormhole();
-    let _output: u32 = receipt.journal.decode().unwrap();
+    let seal = receipt.inner.flat().unwrap()[0].seal.clone();
+    let journal = receipt.journal.bytes;
+    
+    println!("{}", hex::encode(&encode_seal(&seal)));
+    
+    let receipt2 = Receipt::new(
+        InnerReceipt::Flat(SegmentReceipts(vec![SegmentReceipt {
+            seal: seal,
+            index: 0,
+            hashfn: "poseidon".to_string(),
+        }])),
+        journal,
+    );
 
     // Optional: Verify receipt to confirm that recipients will also be able to
     // verify your receipt
-    receipt.verify(WORMHOLE_ID).unwrap();
+    receipt2.verify(WORMHOLE_ID).unwrap();
 }
