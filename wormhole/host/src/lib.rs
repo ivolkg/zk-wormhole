@@ -71,22 +71,19 @@ fn decode_seal(encoded: &[u8]) -> Vec<u32> {
 pub struct PubInputs {
     nullifier: [u8; 32],
     amount: u64,
-    balance: u64,
     state_root: [u8; 32],
     sender_addr: [u8; 20],
 }
 impl PubInputs {
     pub fn new(input_array: &[u8]) -> PubInputs {
         let nullifier = vec_to_array32(extract_bytes(&input_array[0..128], 32)).unwrap();
-        let amount = u32::from_le_bytes(vec_to_array4(input_array[128..132].to_vec()).unwrap()) as u64;
-        let balance = u32::from_le_bytes(vec_to_array4(input_array[132..136].to_vec()).unwrap()) as u64;
+        let amount = u64::from_le_bytes(vec_to_array8(input_array[128..136].to_vec()).unwrap()) as u64;
         let state_root = vec_to_array32(extract_bytes(&input_array[136..264], 32)).unwrap();
         let sender_addr = vec_to_array20(extract_bytes(&input_array[264..],20)).unwrap();
 
         PubInputs {
             nullifier,
             amount,
-            balance,
             state_root,
             sender_addr,
         }
@@ -101,13 +98,13 @@ fn vec_to_array4(vec: Vec<u8>) -> Result<[u8; 4], String> {
         Err(format!("expected a vec<u8> of length 4, got {}", vec.len()))
     }
 }
-fn vec_to_array8(vec: Vec<u8>) -> Result<[u8; 1], String> {
-    if vec.len() == 1 {
-        let mut arr = [0u8; 1];
+fn vec_to_array8(vec: Vec<u8>) -> Result<[u8; 8], String> {
+    if vec.len() == 8 {
+        let mut arr = [0u8; 8];
         arr.copy_from_slice(&vec);
         Ok(arr)
     } else {
-        Err(format!("expected a vec<u8> of length 1, got {}", vec.len()))
+        Err(format!("expected a vec<u8> of length 8, got {}", vec.len()))
     }
 }
 fn vec_to_array20(vec: Vec<u8>) -> Result<[u8; 20], String> {
@@ -133,7 +130,6 @@ fn extract_bytes(encoded_slice: &[u8], num_bytes: usize) -> Vec<u8> {
 }
 pub fn expose_pi(receipt: &Receipt) {
     let journal = &receipt.journal.bytes;
-    println!("{:?}", journal);
     let pi = PubInputs::new(journal);
     println!("{:?}", pi);
 }

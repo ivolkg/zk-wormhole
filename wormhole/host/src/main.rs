@@ -79,6 +79,7 @@ fn main() {
     // TODO: Implement code for retrieving receipt journal here.
 
     let receipt = wormhole();
+    expose_pi(&receipt);
     let seal = receipt.inner.flat().unwrap()[0].seal.clone();
     let journal = receipt.journal.bytes;
     
